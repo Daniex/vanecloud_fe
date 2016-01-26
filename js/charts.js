@@ -57,6 +57,12 @@ $(document).ready(function () {
     }
     
     easyPieChart('pie-chart-tiny', '#fff', 'rgba(0,0,0,0.08)', 'rgba(0,0,0,0)', 3, 100);
+    easyPieChart('pie-chart-tiny-red', '#e91f63', 'rgba(0,0,0,0.08)', 'rgba(0,0,0,0)', 3, 100);
+    easyPieChart('pie-chart-tiny-blue', '#00bcd3', 'rgba(0,0,0,0.08)', 'rgba(0,0,0,0)', 3, 100);
+    easyPieChart('pie-chart-tiny-yellow', '#fec207', 'rgba(0,0,0,0.08)', 'rgba(0,0,0,0)', 3, 100);
+    easyPieChart('pie-chart-tiny-green', '#4cb050', 'rgba(0,0,0,0.08)', 'rgba(0,0,0,0)', 3, 100);
+    easyPieChart('pie-chart-tiny-grey', '#607d8b', 'rgba(0,0,0,0.08)', 'rgba(0,0,0,0)', 3, 100);
+    easyPieChart('pie-chart-tiny-orange', '#ff9800', 'rgba(0,0,0,0.08)', 'rgba(0,0,0,0)', 3, 100);
     
       
 });

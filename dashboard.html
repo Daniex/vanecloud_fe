@@ -10,12 +10,14 @@
     <title>SuperFlat Responsive Admin Template</title>
     <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
     <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/jquery.bootgrid/dist/jquery.bootgrid.override.min.css" rel="stylesheet">
     <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
     <link href="css/app.min.css" rel="stylesheet">
+    <link href="css/demo.css" rel="stylesheet">
 </head>
 
 <body>
-    <header id="header" class="clearfix" data-spy="affix" data-offset-top="65">
+    <header id="header" class="clearfix bg-black " data-spy="affix" data-offset-top="65">
         <ul class="header-inner">
             <!-- Logo -->
             <li class="logo">
@@ -24,23 +26,25 @@
             </li>
             <!-- Settings -->
             <li class="pull-right dropdown hidden-xs">
-                <a href="" data-toggle="dropdown">
-                    <i class="zmdi zmdi-more-vert"></i>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a data-toggle="fullscreen" href="">Toggle Fullscreen</a></li>
-                    <li><a data-toggle="localStorage" href="">Clear Local Storage</a></li>
-                    <li><a href="">Account Settings</a></li>
-                    <li><a href="">Other Settings</a></li>
+                <br/>
+                <btn class="btn bg-black btn-default btn-icon-text" href="" data-toggle="dropdown">
+                    <i class="zmdi zmdi-more-vert"></i> Setting
+                </btn>
+                <ul class="dropdown-menu dm-icon" role="menu">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="zmdi zmdi-home"></i> Action</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="zmdi zmdi-account"></i> Another action</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="zmdi zmdi-email"></i> Something else here</a></li>
+                    <li class="divider"></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="zmdi zmdi-pin"></i> Separated link</a></li>
                 </ul>
             </li>
             <!-- Quick Apps -->
             <li class="hidden-xs dropdown pull-right">
-                <a href="" data-toggle="dropdown">
-                    <i class="zmdi zmdi-apps"></i>
-                </a>
+                <br/>
+                <btn class="btn bg-black btn-default btn-icon-text" href="" data-toggle="dropdown">
+                    <i class="zmdi zmdi-apps"></i> Project
+                </btn>
                 <div class="dropdown-menu pull-right" id="launch-apps">
-                    <div class="dropdown-header bg-teal">SUPERFLAT APPS</div>
                     <div class="la-body">
                         <div class="lab-item">
                             <a href="" class="bg-red">
@@ -116,286 +120,260 @@
     </aside>
     <section id="content">
         <div class="container">
-            <div class="tile">
-                <div class="t-header bg-black th-alt">
-                    <div class="th-title">Dynamic Chart</div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="tile">
+                        <div class="t-header bg-black th-alt">
+                            <div class="th-title">Dynamic Chart</div>
+                        </div>
+                        <br/>
+                        <div class="t-body">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="bg-white text-center p-15">
+                                        <div class="pie-chart-tiny-red po-item color-black" data-percent="23">
+                                            <span class="poi-percent">23</span>
+                                            <div class="poi-title">Bounce Rate</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="bg-white text-center p-15">
+                                        <div class="pie-chart-tiny-blue po-item color-black" data-percent="57">
+                                            <span class="poi-percent">57</span>
+                                            <div class="poi-title">Emails Sent</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="bg-white text-center p-15">
+                                        <div class="pie-chart-tiny-yellow po-item color-black" data-percent="57">
+                                            <span class="poi-percent">57</span>
+                                            <div class="poi-title">Emails Sent</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="bg-white text-center p-15">
+                                        <div class="pie-chart-tiny-green po-item color-black" data-percent="34">
+                                            <span class="poi-percent">34</span>
+                                            <div class="poi-title">Sales Rate</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="bg-white text-center p-15">
+                                        <div class="pie-chart-tiny-grey po-item color-black" data-percent="86">
+                                            <span class="poi-percent">86</span>
+                                            <div class="poi-title">New Visitors</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="bg-white text-center p-15">
+                                        <div class="pie-chart-tiny-orange po-item color-black" data-percent="86">
+                                            <span class="poi-percent">86</span>
+                                            <div class="poi-title">New Visitors</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                    </div>
                 </div>
-                <br/>
-                <div class="t-body">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-4">
-                            <div class="bg-lime text-center p-15">
-                                <div class="pie-chart-tiny po-item" data-percent="23">
-                                    <span class="poi-percent">23</span>
-                                    <div class="poi-title">Bounce Rate</div>
-                                </div>
+                <div class="col-sm-6">
+                    <!-- Site Visitors -->
+                    <div class="tile">
+                        <div class="t-header th-alt bg-black">
+                            <div class="th-title">Site Visitors</div>
+                            <div class="actions dropdown">
+                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more"></i></a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="">Refresh</a></li>
+                                    <li><a href="">Settings</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-4">
-                            <div class="bg-lightgreen text-center p-15">
-                                <div class="pie-chart-tiny po-item" data-percent="57">
-                                    <span class="poi-percent">57</span>
-                                    <div class="poi-title">Emails Sent</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-4">
-                            <div class="bg-lightgreen text-center p-15">
-                                <div class="pie-chart-tiny po-item" data-percent="57">
-                                    <span class="poi-percent">57</span>
-                                    <div class="poi-title">Emails Sent</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-4">
-                            <div class="bg-amber text-center p-15">
-                                <div class="pie-chart-tiny po-item" data-percent="34">
-                                    <span class="poi-percent">34</span>
-                                    <div class="poi-title">Sales Rate</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-4">
-                            <div class="bg-orange text-center p-15">
-                                <div class="pie-chart-tiny po-item" data-percent="86">
-                                    <span class="poi-percent">86</span>
-                                    <div class="poi-title">New Visitors</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-4">
-                            <div class="bg-orange text-center p-15">
-                                <div class="pie-chart-tiny po-item" data-percent="86">
-                                    <span class="poi-percent">86</span>
-                                    <div class="poi-title">New Visitors</div>
+                        <div class="tile-body ">
+                            <div class="bg-black count-box">
+                                <div class="row">
+                                    <div class="col-sm-3 col-xs-6">
+                                        <div class="cb-item">
+                                            <h3>298K</h3>
+                                            <small>This Month</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6">
+                                        <div class="cb-item">
+                                            <h3>87K</h3>
+                                            <small>This Week</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6">
+                                        <div class="cb-item">
+                                            <h3>12967</h3>
+                                            <small>Today</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6">
+                                        <div class="cb-item">
+                                            <h3>4872K</h3>
+                                            <small>Total Visits</small>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <br/>
+                <div class="col-sm-6">
+                    <div class="tile">
+                        <div class="t-header th-alt bg-black">
+                            <div class="th-title">Latest Signups</div>
+                            <div class="actions dropdown">
+                                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more"></i></a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="">Refresh</a></li>
+                                    <li><a href="">Settings</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tile-body">
+                            <div class="count-box ">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </div>
+                        </div>
+                        <a class="view-more" href="">View more</a>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="tile">
+                        <div class="t-header th-alt bg-black">
+                            <div class="th-title">Command Buttons</div>
+                        </div>
+                        <table id="data-table-command" class="table table-bordered table-vmiddle">
+                            <thead>
+                                <tr>
+                                    <th data-column-id="id" data-type="numeric">ID</th>
+                                    <th data-column-id="sender">Sender</th>
+                                    <th data-column-id="received" data-order="desc">Received</th>
+                                    <th data-column-id="commands" data-formatter="commands" data-sortable="false">Commands</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>10238</td>
+                                    <td>eduardo@pingpong.com</td>
+                                    <td>14.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10243</td>
+                                    <td>eduardo@pingpong.com</td>
+                                    <td>19.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10248</td>
+                                    <td>eduardo@pingpong.com</td>
+                                    <td>24.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10253</td>
+                                    <td>eduardo@pingpong.com</td>
+                                    <td>29.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10234</td>
+                                    <td>lila@google.com</td>
+                                    <td>10.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10239</td>
+                                    <td>lila@google.com</td>
+                                    <td>15.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10244</td>
+                                    <td>lila@google.com</td>
+                                    <td>20.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10249</td>
+                                    <td>lila@google.com</td>
+                                    <td>25.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10237</td>
+                                    <td>robert@bingo.com</td>
+                                    <td>13.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10242</td>
+                                    <td>robert@bingo.com</td>
+                                    <td>18.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10247</td>
+                                    <td>robert@bingo.com</td>
+                                    <td>23.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10252</td>
+                                    <td>robert@bingo.com</td>
+                                    <td>28.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10236</td>
+                                    <td>simon@yahoo.com</td>
+                                    <td>12.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10241</td>
+                                    <td>simon@yahoo.com</td>
+                                    <td>17.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10246</td>
+                                    <td>simon@yahoo.com</td>
+                                    <td>22.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10251</td>
+                                    <td>simon@yahoo.com</td>
+                                    <td>27.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10235</td>
+                                    <td>tim@microsoft.com</td>
+                                    <td>11.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10240</td>
+                                    <td>tim@microsoft.com</td>
+                                    <td>16.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10245</td>
+                                    <td>tim@microsoft.com</td>
+                                    <td>21.10.2013</td>
+                                </tr>
+                                <tr>
+                                    <td>10250</td>
+                                    <td>tim@microsoft.com</td>
+                                    <td>26.10.2013</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-
-                <div class="row">
-                    <div class="col-sm-6">
-                        
-                        <!-- Site Visitors -->
-                        <div class="tile">
-                            <div class="t-header th-alt bg-blue">
-                                <div class="th-title">Site Visitors</div>
-
-                                <div class="actions dropdown">
-                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more"></i></a>
-                                    
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="">Refresh</a></li>
-                                        <li><a href="">Settings</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="tile-body">
-                                <div class="bg-blue count-box">
-                                    <div class="row">
-                                        <div class="col-sm-3 col-xs-6">
-                                            <div class="cb-item">
-                                                <h3>298K</h3>
-                                                <small>This Month</small>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 col-xs-6">
-                                            <div class="cb-item">
-                                                <h3>87K</h3>
-                                                <small>This Week</small>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 col-xs-6">
-                                            <div class="cb-item">
-                                                <h3>12967</h3>
-                                                <small>Today</small>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 col-xs-6">
-                                            <div class="cb-item">
-                                                <h3>4872K</h3>
-                                                <small>Total Visits</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="tile">
-                            <div class="t-header th-alt bg-purple">
-                                <div class="th-title">Latest Signups</div>
-
-                                <div class="actions dropdown">
-                                    <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more"></i></a>
-                                    
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="">Refresh</a></li>
-                                        <li><a href="">Settings</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="tile-body">
-                                <div class="count-box bg-purple">
-                                    <div class="row text-center">
-                                        <div class="col-sm-3 col-xs-6">
-                                            <div class="cb-item">
-                                                <h3 class="">232</h3>
-                                                <small>This Month</small>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 col-xs-6">
-                                            <div class="cb-item">
-                                                <h3 class="">63</h3>
-                                                <small>This Week</small>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 col-xs-6">
-                                            <div class="cb-item">
-                                                <h3 class="">22</h3>
-                                                <small>Today</small>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 col-xs-6">
-                                            <div class="cb-item">
-                                                <h3 class="">1365</h3>
-                                                <small>Total Users</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                                <a class="view-more" href="">View more</a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-
-            <div class="tile">
-                    <div class="t-header">
-                        <div class="th-title">Command Buttons <small>Add Command Buttons to Table Rows to perform custom actions such as Edit, Delete, View etc.</small></div>
-                    </div>
-                    
-                    <table id="data-table-command" class="table table-bordered table-vmiddle">
-                        <thead>
-                            <tr>
-                                <th data-column-id="id" data-type="numeric">ID</th>
-                                <th data-column-id="sender">Sender</th>
-                                <th data-column-id="received" data-order="desc">Received</th>
-                                <th data-column-id="commands" data-formatter="commands" data-sortable="false">Commands</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>10238</td>
-                                <td>eduardo@pingpong.com</td>
-                                <td>14.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10243</td>
-                                <td>eduardo@pingpong.com</td>
-                                <td>19.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10248</td>
-                                <td>eduardo@pingpong.com</td>
-                                <td>24.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10253</td>
-                                <td>eduardo@pingpong.com</td>
-                                <td>29.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10234</td>
-                                <td>lila@google.com</td>
-                                <td>10.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10239</td>
-                                <td>lila@google.com</td>
-                                <td>15.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10244</td>
-                                <td>lila@google.com</td>
-                                <td>20.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10249</td>
-                                <td>lila@google.com</td>
-                                <td>25.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10237</td>
-                                <td>robert@bingo.com</td>
-                                <td>13.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10242</td>
-                                <td>robert@bingo.com</td>
-                                <td>18.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10247</td>
-                                <td>robert@bingo.com</td>
-                                <td>23.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10252</td>
-                                <td>robert@bingo.com</td>
-                                <td>28.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10236</td>
-                                <td>simon@yahoo.com</td>
-                                <td>12.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10241</td>
-                                <td>simon@yahoo.com</td>
-                                <td>17.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10246</td>
-                                <td>simon@yahoo.com</td>
-                                <td>22.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10251</td>
-                                <td>simon@yahoo.com</td>
-                                <td>27.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10235</td>
-                                <td>tim@microsoft.com</td>
-                                <td>11.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10240</td>
-                                <td>tim@microsoft.com</td>
-                                <td>16.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10245</td>
-                                <td>tim@microsoft.com</td>
-                                <td>21.10.2013</td>
-                            </tr>
-                            <tr>
-                                <td>10250</td>
-                                <td>tim@microsoft.com</td>
-                                <td>26.10.2013</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
         </div>
     </section>
     <footer id="footer">
@@ -477,59 +455,58 @@
     <script src="js/functions.js"></script>
     <script src="js/demo.js"></script>
     <script src="js/charts.js"></script>
+    <!-- Data Table -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        //Basic Example
+        $("#data-table").bootgrid({
+            css: {
+                icon: 'zmdi icon',
+                iconColumns: 'zmdi-view-module',
+                iconDown: 'zmdi-expand-more',
+                iconRefresh: 'zmdi-refresh',
+                iconUp: 'zmdi-expand-less',
+                iconSearch: 'zmdi-search'
+            },
+        });
 
-            <!-- Data Table -->
-        <script type="text/javascript">
-            $(document).ready(function(){
-                //Basic Example
-                $("#data-table").bootgrid({
-                    css: {
-                        icon: 'zmdi icon',
-                        iconColumns: 'zmdi-view-module',
-                        iconDown: 'zmdi-expand-more',
-                        iconRefresh: 'zmdi-refresh',
-                        iconUp: 'zmdi-expand-less',
-                        iconSearch: 'zmdi-search'
-                    },
-                });
-                
-                //Selection
-                $("#data-table-selection").bootgrid({
-                    css: {
-                        icon: 'zmdi icon',
-                        iconColumns: 'zmdi-view-module',
-                        iconDown: 'zmdi-expand-more',
-                        iconRefresh: 'zmdi-refresh',
-                        iconUp: 'zmdi-expand-less',
-                        iconSearch: 'zmdi-search'
+        //Selection
+        $("#data-table-selection").bootgrid({
+            css: {
+                icon: 'zmdi icon',
+                iconColumns: 'zmdi-view-module',
+                iconDown: 'zmdi-expand-more',
+                iconRefresh: 'zmdi-refresh',
+                iconUp: 'zmdi-expand-less',
+                iconSearch: 'zmdi-search'
 
-                    },
-                    selection: true,
-                    multiSelect: true,
-                    rowSelect: true,
-                    keepSelection: true
-                });
-                
-                //Command Buttons
-                $("#data-table-command").bootgrid({
-                    css: {
-                        icon: 'zmdi icon',
-                        iconColumns: 'zmdi-view-module',
-                        iconDown: 'zmdi-expand-more',
-                        iconRefresh: 'zmdi-refresh',
-                        iconUp: 'zmdi-expand-less'
-                    },
-                    formatters: {
-                        "commands": function(column, row) {
-                            return "<button type=\"button\" class=\"btn btn-icon btn-info command-edit\" data-row-id=\"" + row.id + "\"><span class=\"zmdi zmdi-edit\"></span></button> " + 
-                                "<button type=\"button\" class=\"btn btn-icon btn-info command-delete\" data-row-id=\"" + row.id + "\"><span class=\"zmdi zmdi-delete\"></span></button>";
-                        }
-                    }
-                });
-            });
-        </script>
-        <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
-        <script src="vendors/bower_components/jquery.bootgrid/dist/jquery.bootgrid-override.min.js"></script>
+            },
+            selection: true,
+            multiSelect: true,
+            rowSelect: true,
+            keepSelection: true
+        });
+
+        //Command Buttons
+        $("#data-table-command").bootgrid({
+            css: {
+                icon: 'zmdi icon',
+                iconColumns: 'zmdi-view-module',
+                iconDown: 'zmdi-expand-more',
+                iconRefresh: 'zmdi-refresh',
+                iconUp: 'zmdi-expand-less'
+            },
+            formatters: {
+                "commands": function(column, row) {
+                    return "<button type=\"button\" class=\"btn btn-icon btn-info command-edit\" data-row-id=\"" + row.id + "\"><span class=\"zmdi zmdi-edit\"></span></button> " +
+                        "<button type=\"button\" class=\"btn btn-icon btn-info command-delete\" data-row-id=\"" + row.id + "\"><span class=\"zmdi zmdi-delete\"></span></button>";
+                }
+            }
+        });
+    });
+    </script>
+    <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+    <script src="vendors/bower_components/jquery.bootgrid/dist/jquery.bootgrid-override.min.js"></script>
 </body>
 
 </html>
